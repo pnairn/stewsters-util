@@ -6,15 +6,7 @@ import com.stewsters.util.mapgen.CellType;
 import com.stewsters.util.mapgen.terrain.NoiseFunction3d;
 import com.stewsters.util.mapgen.threeDimension.MapGen3d;
 import com.stewsters.util.mapgen.threeDimension.brush.DrawCell3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.AndPredicate3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.CellEqualAny3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.CellEquals3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.CellNearCell3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.CellNearEdge3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.CellNotNearCell3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.NoiseGreaterThan3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.NotPredicate3d;
-import com.stewsters.util.mapgen.threeDimension.predicate.OrPredicate3d;
+import com.stewsters.util.mapgen.threeDimension.predicate.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -25,7 +17,7 @@ public class GenerateMap3dTest {
     ExampleCellType wall = new ExampleCellType('X', true);
     ExampleCellType floor = new ExampleCellType('.', false);
     ExampleCellType grass = new ExampleCellType(',', false);
-    ExampleCellType water = new ExampleCellType('w',false);
+    ExampleCellType water = new ExampleCellType('w', false);
 
     @Test
     public void testGenerationOfBoxViaPredicates() {
